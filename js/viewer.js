@@ -46,7 +46,14 @@ var videoViewer = {
 		'video/webm',
 		'video/x-flv',
 		'video/ogg',
-		'video/quicktime'
+		'video/quicktime',
+                'audio/mpeg',
+                'audio/ogg',
+                'audio/flac',
+                'audio/wav',
+                'audio/mp4',
+                'audio/m4b'
+
 	],
 	onView : function(file, data) {
 		videoViewer.file = file;
