@@ -1,7 +1,7 @@
 var videoViewer = {
 	UI : {
 		playerTemplate : '<header><link href="'+OC.filePath('files_videoplayer', 'videojs', 'src')+'/video-js.css" rel="stylesheet"><script src="'+OC.filePath('files_videoplayer', 'videojs', 'src')+'/video.js"></script>' +
-		'</header><video id="my_video_1" class="video-js vjs-sublime-skin" controls preload="auto" width="100%" height="100%" poster="'+OC.filePath('files_videoplayer', '', 'img')+'/poster.png" data-setup=\'{"techOrder": ["html5"]}\'>' +
+		'</header><video id="my_video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="100%" poster="'+OC.filePath('files_videoplayer', '', 'img')+'/poster.png" data-setup=\'{"techOrder": ["html5"], "autoplay":true}\'>' +
 		'<source type="%type%" src="%src%" />' +
 		'</video>',
 		show : function () {
@@ -28,8 +28,6 @@ var videoViewer = {
 			$("#my_video_1").append('<a class="icon-view-close" id="box-close" href="#"></a>');
 			// add event to close button
 			$('#box-close').click(videoViewer.hidePlayer);
-			// autoplay
-			vjsPlayer.play();
 		},
 		hide : function() {
 			$('#videoplayer_overlay').fadeOut('fast', function() {
