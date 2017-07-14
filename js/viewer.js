@@ -53,8 +53,7 @@ var videoViewer = {
                 'audio/wav',
                 'audio/mp4',
                 'audio/m4b',
-		'audio/x-ms-wma'
-
+                'audio/x-ms-wma'
 	],
 	onView : function(file, data) {
 		videoViewer.file = file;
