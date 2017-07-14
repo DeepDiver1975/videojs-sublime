@@ -47,13 +47,13 @@ var videoViewer = {
 		'video/x-flv',
 		'video/ogg',
 		'video/quicktime',
-                'audio/mpeg',
-                'audio/ogg',
-                'audio/flac',
-                'audio/wav',
-                'audio/mp4',
-                'audio/m4b',
-                'audio/x-ms-wma'
+		'audio/mpeg',
+		'audio/ogg',
+		'audio/flac',
+		'audio/wav',
+		'audio/mp4',
+		'audio/m4b',
+		'audio/x-ms-wma'
 	],
 	onView : function(file, data) {
 		videoViewer.file = file;
