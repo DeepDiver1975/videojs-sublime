@@ -11,7 +11,5 @@ The player is a modified version of [this app](https://apps.owncloud.com/content
 
 Video.js: http://videojs.com/
 
-Video.js skin: https://github.com/cabin/videojs-sublime-skin
-
 ## License
 MIT
