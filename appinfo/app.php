@@ -16,10 +16,12 @@
 */
 
 // Modify content security policy to allow self and data URI font-src
-$policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
-$policy->addAllowedFontDomain('self');
-$policy->addAllowedFontDomain('data:');
-\OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
+if (\OCP\Util::getVersion()[0] >= 10) {
+  $policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
+  $policy->addAllowedFontDomain('self');
+  $policy->addAllowedFontDomain('data:');
+  \OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
+}
 
 OCP\Util::addStyle( 'files_videoplayer', 'style' );
 OCP\Util::addscript( 'files_videoplayer', 'viewer');
