@@ -60,3 +60,5 @@ nbproject
 /tests/Integration/vendor
 
 build
+dist
+node_modules

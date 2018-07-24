@@ -1,0 +1,30 @@
+{
+  "name": "files_videoplayer",
+  "version": "0.9.8",
+  "description": "A responsive video player using a skinned version of Video.js",
+  "scripts": {
+    "build": "grunt _build",
+    "watch": "grunt _watch",
+    "clean": "grunt clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owncloud/files_videoplayer.git"
+  },
+  "author": "Björn Korella",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owncloud/files_videoplayer/issues"
+  },
+  "homepage": "https://github.com/owncloud/files_videoplayer#readme",
+  "dependencies": {
+    "video.js": "^7.0.5"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

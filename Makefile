@@ -23,13 +23,20 @@ endif
 
 
 # Removes the appstore build
+.PHONY: frontend
+frontend:
+	npm install
+	npm run build
+
+# Removes the appstore build, dependencies and js/css files
 .PHONY: clean
 clean:
-	rm -rf ./build/artifacts
+	rm -rf ./build/artifacts ./node_modules ./dist
 
 # Builds the source and appstore package
 .PHONY: dist
 dist:
+	make frontend
 	make source
 	make appstore
 
@@ -37,6 +44,7 @@ dist:
 .PHONY: source
 source:
 	rm -rf $(source_build_directory)
+	rm -rf ./node_modules
 	mkdir -p $(source_build_directory)
 	tar cvzf $(source_package_name).tar.gz ../$(app_name) \
 	--exclude-vcs \
@@ -50,6 +58,7 @@ source:
 .PHONY: appstore
 appstore:
 	rm -rf $(appstore_build_directory)
+	rm -rf ./node_modules
 	mkdir -p $(appstore_package_name)
 	cp --parents -r \
 	appinfo \
